@@ -1,17 +1,18 @@
-
-
-https://www.selenium.dev/documentation/webdriver/drivers/options/
-
+# https://www.selenium.dev/documentation/webdriver/drivers/options/
+import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
     
-    service = webdriver.ChromeService(port=1234)
 
-    options = webdriver.ChromeOptions()
-    options.page_load_strategy = 'normal'
-    options.add_argument("--start-maximized")
-    options.binary_location = chrome_bin
+# service = webdriver.ChromeService(port=1234)    
+service = webdriver.ChromeService()
+
+options = webdriver.ChromeOptions()
+options.page_load_strategy = 'normal'
+options.add_argument("--start-maximized")
+options.binary_location = chrome_bin
+
 
 # driver = webdriver.Chrome(options=options)
     driver = webdriver.Chrome(service=service; options=options)
