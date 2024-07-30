@@ -32,6 +32,92 @@ from selenium.webdriver.common.by import By
 for e in elements:
     print(e.text)
     
+
+
+
+
+
+'''
+#https://www.python.org/downloads/windows/
+
+#C:\Users\D\AppData\Local\Programs\Python\Python312>
+  
+pip install selenium
+
+python.exe -m pip --version
+python -m pip install -U selenium
+
+
+
+
+
+#https://sites.google.com/chromium.org/driver/downloads\
+Path = "C:\Program Files (x86)\chromedriver\chromedriver.exe"
+
+import selenium
+selenium.__version__
+from selenium import webdriver
+#Path = "C:\Program Files (x86)\chromedriver\chromedriver.exe"
+#driver =  webdriver.Chrome
+
+
+################################
+import selenium
+from selenium import webdriver
+
+#PATH= "C:\Program Files (x86)\chromedriver\chromedriver.exe"
+driver1 = webdriver.Chrome()
+driver1.get("http://www.yahoo.com.hk")
+
+
+service = Service()
+options = webdriver.ChromeOptions()
+#driver = webdriver.Chrome(service = service, options = options)
+driver = webdriver.Chrome()
+driver.get("http://www.google.com.hk")
+print(driver.title)
+
+
+
+
+
+
+
+
+
+
+
+Selenium-IDE 
+Record:
+Playback:
+Browser Check: 
+Check Elements: 
+Spotting Errors: 
+Exporting Tests: 
+
+Selenium RC (Remote control)
+Improved API:
+Better Performance:
+Support for Modern Web Technologies:
+
+
+Selenium Web Driver
+Direct Communication with Browsers: 
+Support for Parallel Execution:
+Rich Set of APIs:
+
+Selenium GRID
+'''
+
+
+
+
+
+
+
+
+
+
     
     https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/scripting-monitors/introduction-scripted-browser-monitors/
 
