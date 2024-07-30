@@ -1,4 +1,39 @@
-https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/scripting-monitors/introduction-scripted-browser-monitors/
+
+
+https://www.selenium.dev/documentation/webdriver/drivers/options/
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+    
+    service = webdriver.ChromeService(port=1234)
+
+    options = webdriver.ChromeOptions()
+    options.page_load_strategy = 'normal'
+    options.add_argument("--start-maximized")
+    options.binary_location = chrome_bin
+
+# driver = webdriver.Chrome(options=options)
+    driver = webdriver.Chrome(service=service; options=options)
+    driver.get("https://www.example.com")
+
+
+
+    fruits = driver.find_element(By.ID, "fruits")
+    fruit = fruits.find_element(By.CLASS_NAME,"tomatoes")
+    fruit = driver.find_element(By.CSS_SELECTOR,"#fruits .tomatoes")
+    plants = driver.find_elements(By.TAG_NAME, "li")
+    elements = driver.find_elements(By.TAG_NAME, 'div')
+  
+
+
+    # Get all the elements available with tag name 'p'
+
+for e in elements:
+    print(e.text)
+    
+    
+    https://docs.newrelic.com/docs/synthetics/synthetic-monitoring/scripting-monitors/introduction-scripted-browser-monitors/
 
 Visit a URL 
 
@@ -55,36 +90,4 @@ driver.quit()
 
 
 
-
-https://www.selenium.dev/documentation/webdriver/drivers/options/
-
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-
-    
-    service = webdriver.ChromeService(port=1234)
-
-    options = webdriver.ChromeOptions()
-    options.page_load_strategy = 'normal'
-    options.add_argument("--start-maximized")
-    options.binary_location = chrome_bin
-
-# driver = webdriver.Chrome(options=options)
-    driver = webdriver.Chrome(service=service; options=options)
-    driver.get("https://www.example.com")
-
-
-
-    fruits = driver.find_element(By.ID, "fruits")
-    fruit = fruits.find_element(By.CLASS_NAME,"tomatoes")
-    fruit = driver.find_element(By.CSS_SELECTOR,"#fruits .tomatoes")
-    plants = driver.find_elements(By.TAG_NAME, "li")
-    elements = driver.find_elements(By.TAG_NAME, 'div')
-  
-
-
-    # Get all the elements available with tag name 'p'
-
-for e in elements:
-    print(e.text)
   
