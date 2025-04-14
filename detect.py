@@ -27,10 +27,10 @@ while True:
     text = pyperclip.paste()
 
     # Check if keyword is found
-    if keyword.lower() in text.lower():
-        print(f"✅ Keyword '{keyword}' found after {refresh_count} refreshes!")
+    if any(keyword.lower() in text for keyword in keywords):
+    #if keyword.lower() in text.lower():
+        print(f"✅ Found one of the keywords {keywords} after {refresh_count} refreshes!")
         print("🐝 Bee. bee... bee.")
-
         # Bee-like beeping sounds
         winsound.Beep(1000, 200)
         time.sleep(0.2)
