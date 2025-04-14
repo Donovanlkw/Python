@@ -8,6 +8,13 @@ $env:Path += ";$path1"
 
 pip --version  
 
+
+
+pip install pyautogui
+pip install time
+
+
+
 <#
 
 pip install selenium
