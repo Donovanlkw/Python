@@ -1,9 +1,29 @@
+
+"C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222 --user-data-dir="C:/chrome-profile"
+"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --remote-debugging-port=9222 --user-data-dir="C:\edge-profile"
+https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+
+
+from selenium.webdriver.chrome.options import Options
+from selenium import webdriver
+
+options = Options()
+options.debugger_address = "localhost:9222"
+driver = webdriver.Chrome(options=options)
+
+driver.get("https://example.com")
+
+
+
 # https://www.selenium.dev/documentation/webdriver/drivers/options/
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-    
+
+
+
+
 
 # service = webdriver.ChromeService(port=1234)    
 service = webdriver.ChromeService()
