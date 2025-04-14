@@ -9,5 +9,8 @@ pip install pyautogui
 pip install time
 pip install selenium
 
+pip install playwright
+python -m playwright install
+
 python.exe -m pip --version
 python -m pip install -U selenium
