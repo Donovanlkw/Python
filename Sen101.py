@@ -38,16 +38,6 @@ for e in elements:
 
 
 
-'''
-#https://www.python.org/downloads/windows/
-
-#C:\Users\D\AppData\Local\Programs\Python\Python312>
-  
-pip install selenium
-
-python.exe -m pip --version
-python -m pip install -U selenium
-
 
 
 
