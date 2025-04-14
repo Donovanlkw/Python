@@ -1,6 +1,11 @@
 #https://www.python.org/downloads/windows/
 $path = "$env:LOCALAPPDATA\Programs\Python\Python313\Scripts\"
 $env:Path += ";$path"
+$path1 = "$env:LOCALAPPDATA\Programs\Python\Python313\"
+$env:Path += ";$path1"
+
+
+
 pip --version  
 
 <#
