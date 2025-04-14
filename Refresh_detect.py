@@ -3,6 +3,7 @@ pip install pyperclip
 import keyboard
 import pyperclip
 import time
+import winsound
 
 keyword = "Guildford"
 
@@ -19,6 +20,11 @@ while True:
     # Check for keyword
     if keyword.lower() in text.lower():
         print(f"Found keyword: {keyword}")
+        winsound.Beep(1000, 200)  # High beep
+        time.sleep(0.2)
+        winsound.Beep(800, 200)   # Medium beep
+        time.sleep(0.4)
+        winsound.Beep(1000, 300)  # High beep
         break
 
     print("Keyword not found. Refreshing...")
