@@ -1,3 +1,11 @@
+# data.txt #
+'''
+A=1
+B=2
+C=3
+'''
+
+
 import pyautogui
 import time
 
@@ -10,11 +18,10 @@ with open('data.txt', 'r') as file:
 
 A = values.get('A', '')
 B = values.get('B', '')
-C = values.get('C', '')
 
 # Wait time to focus on the first field in the browser
 print("Switch to the web form now. Starting in 5 seconds...")
-time.sleep(5)
+time.sleep(2)
 
 # Type and paste A
 pyautogui.write(str(A))
@@ -29,9 +36,3 @@ pyautogui.hotkey('ctrl', 'a')
 pyautogui.hotkey('ctrl', 'c')
 pyautogui.hotkey('ctrl', 'v')
 pyautogui.press('tab')
-
-# Type and paste C
-pyautogui.write(str(C))
-pyautogui.hotkey('ctrl', 'a')
-pyautogui.hotkey('ctrl', 'c')
-pyautogui.hotkey('ctrl', 'v')
