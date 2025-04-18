@@ -21,3 +21,21 @@ pip install playwright
 #python -m playwright install
 #python.exe -m pip --version
 #python -m pip install -U selenium
+
+
+
+Set-Service -Name w32time -StartupType Automatic
+
+# 2. Start the Windows Time service
+Start-Service -Name w32time
+
+# 3. Configure the time server (you can change this to any preferred NTP server)
+$ntpServer = "time.windows.com,0x1"
+w32tm /config /manualpeerlist:$ntpServer /syncfromflags:manual /reliable:yes /update
+
+# 4. Force resync
+w32tm /resync
+
+# 5. Show the current configuration
+w32tm /query /status
+w32tm /query /configuration
