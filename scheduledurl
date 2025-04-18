@@ -54,11 +54,11 @@ def fill_form(a_val, b_val):
     pyautogui.press("space")
 
 # === RUN ===
-wait_until(open_time)
-open_webpage()
 data = load_data(data_file)
 a_val = data.get("A", "")
 b_val = data.get("B", "")
+wait_until(open_time)
+open_webpage()
 time.sleep(10)  # Let page load
 
 wait_until(action_time)
