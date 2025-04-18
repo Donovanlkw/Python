@@ -1,0 +1,67 @@
+import webbrowser
+import pyautogui
+import time
+from datetime import datetime
+
+# === SETTINGS ===
+url = "https://example.com"
+open_time = "05:45"
+action_time = "06:00"
+data_file = "data.txt"
+
+# === FUNCTIONS ===
+def wait_until(target_time):
+    print(f"Waiting until {target_time}...")
+    while True:
+        now = datetime.now().strftime("%H:%M")
+        if now == target_time:
+            break
+        time.sleep(30)
+
+def load_data(file_path):
+    values = {}
+    with open(file_path, 'r') as f:
+        for line in f:
+            if '=' in line:
+                key, val = line.strip().split('=', 1)
+                values[key.strip()] = val.strip()
+    return values
+
+def open_webpage():
+    print("Opening webpage...")
+    webbrowser.open(url)
+
+def fill_form(a_val, b_val):
+    pyautogui.click()  # Click to focus page
+    time.sleep(1)
+
+    # TAB x3 → type A value
+    for _ in range(3):
+        pyautogui.press("tab")
+        time.sleep(0.3)
+    pyautogui.write(a_val, interval=0.1)
+
+    # TAB x2 → type B value
+    for _ in range(2):
+        pyautogui.press("tab")
+        time.sleep(0.3)
+    pyautogui.write(b_val, interval=0.1)
+
+    # TAB x2 → press SPACE
+    for _ in range(2):
+        pyautogui.press("tab")
+        time.sleep(0.3)
+    pyautogui.press("space")
+
+# === RUN ===
+wait_until(open_time)
+open_webpage()
+data = load_data(data_file)
+a_val = data.get("A", "")
+b_val = data.get("B", "")
+time.sleep(10)  # Let page load
+
+wait_until(action_time)
+fill_form(a_val, b_val)
+
+print("✅ Done.")
