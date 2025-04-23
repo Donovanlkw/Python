@@ -1,0 +1,11 @@
+sudo apt update
+sudo apt install python3-pip python3-tk python3-dev scrot
+sudo apt install python3-pip
+
+python3 -m venv myenv
+source myenv/bin/activate
+pip install pyautogui
+
+
+
+deactivate
