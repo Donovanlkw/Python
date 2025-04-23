@@ -18,6 +18,8 @@ pip install time
 pip install selenium
 pip install playwright
 
+playwright install
+
 #python -m playwright install
 #python.exe -m pip --version
 #python -m pip install -U selenium
