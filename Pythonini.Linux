@@ -4,8 +4,15 @@ sudo apt install python3-pip
 
 python3 -m venv myenv
 source myenv/bin/activate
-pip install pyautogui
+
+pip install pyautogui --break-system-packages
+pip install mouseinfo --break-system-packages
+pip install playsound --break-system-packages
+pip install playwright --break-system-packages
+pip install pyperclip --break-system-packages
+pyperclip
+
+export DISPLAY=:0
+xhost +
 
 
-
-deactivate
