@@ -1,5 +1,5 @@
 # https://www.youtube.com/watch?v=r3gxeX91izk
-# start msedge --remote-debugging-port=9222 --user-data-dir="C:\tmp\edge-debug"
+# Start-Process msedge.exe "--remote-debugging-port=9222 --user-data-dir=C:\tmp\edge-debug https://driverpracticaltest.dvsa.gov.uk/login --inprivate"
 
 import pyautogui
 import pyperclip
